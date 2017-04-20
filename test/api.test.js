@@ -1,11 +1,12 @@
 const request = require('superagent');
 const config = require('../src/config');
+const path = require('path');
 require('should');
 
 describe('Check Express Server Running or not', (done)=> {
 	//run Express Server
 	before(()=> {
-		require('../server/bin/app.js');
+		require(path.join(__dirname,'..', 'server', 'bin', 'app'));
 	});
 
 	it('Check on port', (done)=> {
@@ -19,10 +20,10 @@ describe('Check Express Server Running or not', (done)=> {
 	});
 });
 
-describe('CHeck weather Report', (done)=> {
+describe('Check weather Report', (done)=> {
 	//run Express Server
 	before(()=> {
-		require('../server/bin/app.js');
+		require(path.join(__dirname, '..', 'server', 'bin', 'app'));
 	});
 	// If the City Name is Given
 	it('Check weather report by City Name', (done)=> {

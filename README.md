@@ -14,6 +14,7 @@
 ### Step 1: Build the UI Project:
 ```sh
 $ cd $PROJECT_HOME
+$ sudo npm install create-react-app yarn -g
 $ npm install
 $ npm run build
 ```
@@ -25,4 +26,17 @@ $ docker-compose up --build -d
 
 Open the URL in your browser to access the application: `http://localhost`
 
+
+## T0 Run test cases
+### Step 1: Install the Mocha Library globally:
+```sh
+$ sudo npm install mocha -g
+```
+
+### Step 1: Install the Mocha Library globally:
+```sh
+$ cd $PROJECT_HOME
+$ sudo npm install mocha -g
+$ npm run test
+```
 

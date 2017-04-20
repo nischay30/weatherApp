@@ -51,7 +51,6 @@ class WeatherTabs extends Component {
       );  
     });
 
-    console.log(this.props.reports);
     return (
       <Tabs
         value={this.state.value}
