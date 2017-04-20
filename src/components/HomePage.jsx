@@ -37,7 +37,6 @@ class HomePage extends Component {
 			.get(`${config.serverUrl}/city/${cityName}`)
 			.end((err, res) => {
 				if(err) { console.log('Err:', err); return; }
-				console.log(res['body']);
 				this.setState(res['body']);
 			});
 	}

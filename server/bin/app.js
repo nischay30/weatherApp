@@ -22,3 +22,8 @@ app.listen(expressPort, (err) => {
 	if(err) { console.log(err); return; }
 	console.log('Server started on', expressPort);
 });
+
+// Check initial Route
+app.get('/',(req, res) => {
+ res.status(200).send('ok');		
+});

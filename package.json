@@ -12,6 +12,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-tap-event-plugin": "^2.0.1",
+    "should": "^11.2.1",
     "superagent": "^3.5.2"
   },
   "scripts": {
