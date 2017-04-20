@@ -37,6 +37,12 @@ $ sudo npm install mocha -g
 ```sh
 $ cd $PROJECT_HOME
 $ sudo npm install mocha -g
+```
+### Step 2: Change the server url
+```sh
+$ cd $PROJECT_HOME/src/
+$ Edit the File Config.js and enter the serverUrl 'http://localhost:8080' and save it
+$ cd $PROJECT_HOME
 $ npm run test
 ```
 
