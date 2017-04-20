@@ -1,0 +1,8 @@
+node_modules
+*.lock
+docker-compose.yml
+Dockerfile
+README.md
+public
+src
+

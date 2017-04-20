@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: '.'
+    image: web
+    ports:
+      - 80:8080
+    environment:
+      EXPRESS_PORT: 8080
+      API_KEY: 'f7325f05bef0a047112942af02b76460'
