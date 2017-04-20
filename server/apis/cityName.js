@@ -18,11 +18,25 @@ function transformPayload(weatherReport, res) {
 		name :  weatherReport.city.name,
 		country: weatherReport.city.country
 	}
+	let tempReports = {};
+	for(let i=0; i < weatherReport.list.length; i++) {
+		let time = weatherReport.list[i].dt_txt.split(' ')[0];
+		tempReports[time] = (	tempReports[time] + 1 || 1);
+	}
+	let dates = Object.keys(tempReports);
 	// Day wise Array For weather report
 	let reports = [];
-	let firstDay = true;
 	let counter = 0;
-	for(let i=0; i <5 ; i++) {
+
+	for(let i=0; i<dates.length; i++) {
+		let dayWiseReport = [];
+		for(let j=0; j < tempReports[dates[i]]; j++) {
+				dayWiseReport.push(weatherReport.list[counter]);
+				counter++;
+			}
+			reports.push(dayWiseReport);
+	}
+/*	for(let i=0; i <5 ; i++) {
 		let dayWiseReport = [];
 		if(firstDay) {
 			for(let j=0; j < (weatherReport.list.length % 8); j++) {
@@ -37,6 +51,6 @@ function transformPayload(weatherReport, res) {
 			}
 		}
 		reports.push(dayWiseReport);
-	}
+	}*/
 	res.json({serverCityName, reports: reports, showCity: true});
 }
