@@ -28,7 +28,7 @@ class WeatherTabs extends Component {
 
   render() {
     const tabs = this.props.reports.map((dayReport, index) => {
-      const date = new Date(dayReport[index].dt_txt) ;
+      const date = new Date(dayReport[0].dt_txt) ;
       const date1 = date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate(); 
       const tab = dayReport.map((timeWiseReport, index1)=> {
         return(
