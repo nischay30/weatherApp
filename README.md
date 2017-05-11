@@ -6,7 +6,6 @@
 
 ## Deployment Dependencies
 - [NodeJS](https://nodejs.org)
-- For Windows: [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
 - For Linux: Install docker-cli and docker-compose
 
 ## Deployment instructions
