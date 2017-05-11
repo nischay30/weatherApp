@@ -1,0 +1,6 @@
+#!/bin/sh
+ssh ec2-user@ec2-54-149-112-37.us-west-2.compute.amazonaws.com
+cd /weatherApp
+git pull
+docker-compose up --build
+exit
