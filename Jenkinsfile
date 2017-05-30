@@ -1,4 +1,4 @@
-node('node') {
+node {
   stage: 'Clean'
   sh "rm dist -rf"
 
