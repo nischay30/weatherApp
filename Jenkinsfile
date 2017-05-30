@@ -5,6 +5,11 @@ node {
   stage 'Checkout Repository'
   git url: 'https://github.com/nischay30/weatherApp.git'
 
+  stage 'Install Nodejs'
+  withEnv(["PATH+NODE=${tool name: 'node-7.10.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
+    sh 'node -v'
+  }
+
   stage 'Installing Dependencies'
   env.NODE_ENV = "test"
   print "Environment will be : ${env.NODE_ENV}"
