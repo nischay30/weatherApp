@@ -1,14 +1,14 @@
 node {
+
+  tools {
+    nodejs 'Node 7.x'
+  }
+
   stage: 'Clean'
   sh "rm dist -rf"
 
   stage 'Checkout Repository'
   git url: 'https://github.com/nischay30/weatherApp.git'
-
-  stage 'Install Nodejs'
-  withEnv(["PATH+NODE=${tool name: 'node-7.10.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
-    sh 'node -v'
-  }
 
   stage 'Installing Dependencies'
   env.NODE_ENV = "test"
