@@ -1,8 +1,9 @@
 node {
 
-  tools {
-    nodejs 'Node 7.x'
-  }
+  stage:
+  nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+         }
 
   stage: 'Clean'
   sh "rm dist -rf"
