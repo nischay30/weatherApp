@@ -1,4 +1,4 @@
-node {
+node('node') {
   stage: 'Clean'
   sh "rm dist -rf"
 
@@ -6,6 +6,8 @@ node {
   git url: 'https://github.com/nischay30/weatherApp.git'
 
   stage 'Installing Dependencies'
+  env.NODE_ENV = "test"
+  print "Environment will be : ${env.NODE_ENV}"
   sh "npm prune"
   sh "npm install"
 
