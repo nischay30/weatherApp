@@ -1,7 +1,7 @@
 node {
 
   stage:
-  nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+  nodejs(nodeJSInstallationName: 'Node 7.x', configId: '<config-file-provider-id>') {
                     sh 'npm config ls'
          }
 
