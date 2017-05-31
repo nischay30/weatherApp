@@ -51,7 +51,7 @@ class HomePage extends Component {
 						<TextField
 						  style={{marginLeft: '39%'}}
 							floatingLabelText='City Name'
-							hintText='Enter city Name'
+							hintText='Enter City Name'
 							value={this.state.cityName}
 							required
 							onChange={this.handleCityChange}
