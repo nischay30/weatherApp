@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const expressPort = process.env.EXPRESS_PORT || 8080;
+const expressPort = process.env.EXPRESS_PORT || 8090;
 const routes = require('../apis/router');
 
 //Server the static HTML page

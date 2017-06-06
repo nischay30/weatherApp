@@ -1,5 +1,5 @@
 const request = require('superagent');
-const config = require('../src/config');
+const config = require('./config.test.js');
 const path = require('path');
 require('should');
 
