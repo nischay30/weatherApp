@@ -5,7 +5,7 @@ node {
   stage 'Checkout Repository'
   git url: 'https://github.com/nischay30/weatherApp.git'
 
-  stage Install 'Node js'
+  stage 'Install Node js'
   nodejs(nodeJSInstallationName: 'nodejs') {
     stage 'Installing Dependencies'
     sh "npm prune"
