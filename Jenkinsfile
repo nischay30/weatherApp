@@ -10,6 +10,7 @@ node {
     stage 'Installing Dependencies'
     sh "npm prune"
     sh "npm install create-react-app -g"
+    sh "npm install"
 
     stage 'Building'
     sh "npm run build"
