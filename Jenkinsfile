@@ -9,7 +9,7 @@ node {
   nodejs(nodeJSInstallationName: 'nodejs') {
     stage 'Installing Dependencies'
     sh "npm prune"
-    sh "npm install"
+    sh "npm install create-react-app -g"
 
     stage 'Building'
     sh "npm run build"
