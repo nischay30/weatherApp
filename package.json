@@ -16,8 +16,8 @@
     "superagent": "^3.5.2"
   },
   "scripts": {
-    "express": "node server/bin/app",
-    "start": "react-scripts start",
+    "start": "node server/bin/app",
+    "react-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha test/api.test.js",
     "eject": "react-scripts eject"
